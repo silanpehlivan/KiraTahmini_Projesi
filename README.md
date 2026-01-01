@@ -7,12 +7,7 @@ Bu çalışma, Bitlis Eren Üniversitesi bünyesinde Şilan Pehlivan ve Sevgi Go
 
 İstanbul gibi dinamik ve heterojen bir konut piyasasında doğru kira tahmini yapmak;
 
-Kiracılar için adil fiyat değerlendirmesi,
-
-Ev sahipleri için gerçekçi fiyatlandırma,
-
-Piyasa analizi için veriye dayalı kararlar
-sağlamaktadır.
+Kiracılar için adil fiyat değerlendirmesi, ev sahipleri için gerçekçi fiyatlandırma, piyasa analizi için veriye dayalı kararlar sağlamaktadır.
 
 Bu çalışmada, geleneksel istatistiksel yöntemlerin ötesine geçilerek doğrusal olmayan ve karmaşık ilişkileri yakalayabilen gelişmiş makine öğrenmesi modelleri kullanılmıştır.
 
@@ -45,9 +40,13 @@ Eğitilen modelin son kullanıcıya sunulması amacıyla API tabanlı bir web ar
 Yapılan deneyler sonucunda Stacking Regressor mimarisinin tekil modellere kıyasla daha yüksek performans sunduğu gözlemlenmiştir.
 
 Model	R² Skoru	MAE (Ortalama Mutlak Hata)
+
 Random Forest	0.33	1.017 TL
+
 XGBoost	0.36	1.216 TL
+
 CatBoost	0.37	1.416 TL
+
 Stacking Regressor	0.40	1.616 TL
 
 📌 Modelin genel tahmin başarısı %86 olarak hesaplanmıştır.
@@ -56,17 +55,11 @@ Stacking Regressor	0.40	1.616 TL
 
 Model çıktılarının analizine göre İstanbul’da kira fiyatlarını etkileyen en önemli faktörler:
 
-Alan (m²)
+Alan (m²) : Konutun büyüklüğü fiyat üzerinde en belirleyici etkendir.
 
-Konutun büyüklüğü fiyat üzerinde en belirleyici etkendir.
+Konum (İlçe & Mahalle) : Coğrafi konum kira değerini doğrudan etkilemektedir.
 
-Konum (İlçe & Mahalle)
-
-Coğrafi konum kira değerini doğrudan etkilemektedir.
-
-Bina Yaşı
-
-Yapının yaşı ve durumu fiyatlandırmada önemli rol oynar.
+Bina Yaşı: Yapının yaşı ve durumu fiyatlandırmada önemli rol oynar.
 
 📂 Veri Seti Özellikleri
 
@@ -75,22 +68,10 @@ Yapının yaşı ve durumu fiyatlandırmada önemli rol oynar.
 🔹 Girdi Özellikleri
 
 Coğrafi:
+İlçe (District), Mahalle (Neighborhood)
 
-İlçe (District)
-
-Mahalle (Neighborhood)
-
-Fiziksel:
-
-Oda Sayısı
-
-Salon Sayısı
-
-Metrekare (Area)
-
-Bina Yaşı
-
-Bulunduğu Kat
+Fiziksel: 
+Oda Sayısı, Salon Sayısı, Metrekare (Area), Bina Yaşı, Bulunduğu Kat
 
 🔹 Hedef Değişken
 
