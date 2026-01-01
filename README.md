@@ -83,8 +83,11 @@ Proje, yerel makinede çalıştırılmak üzere aşağıdaki dosya yapısına sa
 
 .
 ├── main.py              # FastAPI uygulaması ve API endpointleri
+
 ├── train_model.py       # Model eğitimi ve veri ön işleme
+
 ├── static/              # Web arayüzü (HTML, CSS, JS)
+
 └── README.md
 
 ▶️ Model Eğitimi
