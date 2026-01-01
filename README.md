@@ -1,7 +1,7 @@
-🏠 İstanbul Kiralık Konut Piyasası – Kira Tahmin Projesi
-Bu proje, İstanbul’daki kiralık konut piyasasına ait veriler kullanılarak makine öğrenmesi yöntemleriyle kira fiyatlarının tahmin edilmesini amaçlamaktadır.
+🏠 İstanbul Kiralık Konut Piyasası
 
-Akademik Not: Bu çalışma, Bitlis Eren Üniversitesi bünyesinde Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu kapsamında geliştirilmiştir.
+Bu proje, İstanbul’daki kiralık konut piyasasına ait veriler kullanılarak makine öğrenmesi yöntemleriyle kira fiyatlarının tahmin edilmesini amaçlamaktadır.
+Bu çalışma, Bitlis Eren Üniversitesi bünyesinde Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu kapsamında geliştirilmiştir.
 
 🚀 Proje Hakkında
 
