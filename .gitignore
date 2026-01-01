@@ -1,0 +1,27 @@
+# Python bytecode ve cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sanal ortam (Virtual Environment)
+venv/
+env/
+.env/
+
+# Makine Öğrenmesi Modelleri ve Veri Setleri
+# (100MB sınırı için en kritik kısım)
+*.pkl
+*.joblib
+*.h5
+*.model
+catboost_info/
+
+# Veri klasörü ve CSV dosyaları
+data/
+*.csv
+*.xlsx
+*.json
+
+# VS Code ve sistem dosyaları
+.vscode/
+.DS_Store

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kira AI - Kira Tahmin Sistemi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar / Input Section -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="icon">🏠</span>
+                <h1>Kira AI</h1>
+            </div>
+            <p class="subtitle">Yapay zeka ile saniyeler içinde gerçekçi kira tahmini yapın.</p>
+
+            <form id="predictionForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="room"><span class="icon">🛏️</span> Oda</label>
+                        <input type="number" id="room" value="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="living_room"><span class="icon">🛋️</span> Salon</label>
+                        <input type="number" id="living_room" value="1" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="area"><span class="icon">📏</span> m²</label>
+                        <input type="number" id="area" value="90" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="floor"><span class="icon">🏢</span> Kat</label>
+                        <input type="number" id="floor" value="4" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age"><span class="icon">🏗️</span> Bina Yaşı</label>
+                    <input type="number" id="age" value="3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="district"><span class="icon">📍</span> İlçe</label>
+                    <select id="district" required>
+                        <option value="" disabled selected>İlçe Seçiniz</option>
+                        <!-- Options will be populated -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="neighborhood"><span class="icon">🏘️</span> Mahalle</label>
+                    <select id="neighborhood" required>
+                        <option value="" disabled selected>Mahalle Seçiniz</option>
+                        <!-- Options will be populated -->
+                    </select>
+                </div>
+
+                <button type="submit" class="predict-btn">Tahmin Et</button>
+            </form>
+        </aside>
+
+        <!-- Main Content / Results Section -->
+        <main class="results">
+            <div class="prediction-header">
+                <h2>TAHMİNİ AYLIK KİRA</h2>
+                <div class="price-display">
+                    <span id="predictedPrice">---</span> <span class="currency">TL</span>
+                </div>
+                <div class="badge">
+                    <span class="check-icon">✔</span> Stacking Başarısı: %<span id="successRate">86</span>
+                </div>
+            </div>
+
+            <div class="model-breakdown">
+                <h3>Model Bazlı Tahminler:</h3>
+                <div class="model-row">
+                    <span class="model-name">XGBoost</span>
+                    <span class="model-price" id="xgbPrice">--- TL</span>
+                </div>
+                <div class="model-row">
+                    <span class="model-name">CatBoost</span>
+                    <span class="model-price" id="catPrice">--- TL</span>
+                </div>
+                <div class="model-row">
+                    <span class="model-name">RandomForest</span>
+                    <span class="model-price" id="rfPrice">--- TL</span>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Fiyat Karşılaştırması</h3>
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
