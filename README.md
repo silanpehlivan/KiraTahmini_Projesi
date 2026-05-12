@@ -1,4 +1,5 @@
 🏠 İstanbul Kiralık Konut Piyasası
+---
 
 Bu proje, İstanbul’daki kiralık konut verileri kullanılarak makine öğrenmesi teknikleri ile kira fiyatlarının tahmin edilmesini amaçlamaktadır.  
 Çalışma, Bitlis Eren Üniversitesi kapsamında Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu çerçevesinde geliştirilmiştir.
@@ -6,6 +7,7 @@ Bu proje, İstanbul’daki kiralık konut verileri kullanılarak makine öğrenm
 ---
 
 🚀 Proje Hakkında
+---
 
 İstanbul gibi büyük ve değişken bir konut piyasasında doğru kira tahmini yapmak; kiracılar için adil fiyatlandırma, ev sahipleri için gerçekçi değerleme ve genel piyasa analizi için veri temelli karar desteği sağlamaktadır.
 
@@ -14,6 +16,7 @@ Bu çalışmada, doğrusal olmayan ilişkileri modelleyebilen gelişmiş makine 
 ---
 
 🧠 Kullanılan Teknolojiler ve Model Mimarisi
+---
 
 Projede temel olarak **Stacking Regressor (Yığınlama Regresyonu)** mimarisi kullanılmıştır.
 
@@ -40,6 +43,7 @@ Eğitilen modelin kullanıcıya sunulması için API tabanlı bir web servisi ge
 ---
 
 📊 Model Performansı
+---
 
 Deneyler sonucunda stacking yaklaşımının tekil modellere göre daha başarılı olduğu gözlemlenmiştir.
 
@@ -65,6 +69,7 @@ Model analizlerine göre kira fiyatlarını en çok etkileyen faktörler:
 ---
 
 📂 Veri Seti
+---
 
 Toplam **11.627 kayıt** kullanılmıştır.
 
@@ -85,6 +90,7 @@ Toplam **11.627 kayıt** kullanılmıştır.
 ---
 
 🛠️ Proje Yapısı
+---
 
 ```
 ├── main.py              # FastAPI uygulaması
@@ -114,3 +120,12 @@ uvicorn main:app --reload
 🎓 Akademik Not
 
 Bu çalışma, Bitlis Eren Üniversitesi kapsamında eğitim ve araştırma amaçlı olarak hazırlanmıştır.
+
+---
+## 📜 Lisans
+
+Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+
+## 👩‍💻 Geliştirici
+
+**Şilan Pehlivan**
