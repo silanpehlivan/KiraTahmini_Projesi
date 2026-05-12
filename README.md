@@ -133,7 +133,7 @@ Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` 
 ---
 ## 👩‍💻 Geliştiriciler
 
-Bu proje, **Makine Öğrenmesi** dersi kapsamında geliştirilmiştir:
+Bu proje, **Makine Öğrenmesi** dersi kapsamında aşağıda isimleri yer alan geliştiriciler tarafından hazırlanmıştır:
 
 - Şilan Pehlivan  
-- Sevgi Golgiyaz  
+- Sevgi Golgiyaz   
