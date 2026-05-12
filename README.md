@@ -1,33 +1,33 @@
 🏠 İstanbul Kiralık Konut Piyasası
 
-Bu proje, İstanbul’daki kiralık konut piyasasına ait veriler kullanılarak makine öğrenmesi yöntemleriyle kira fiyatlarının tahmin edilmesini amaçlamaktadır.  
-Bu çalışma, Bitlis Eren Üniversitesi bünyesinde Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu kapsamında geliştirilmiştir.
+Bu proje, İstanbul’daki kiralık konut verileri kullanılarak makine öğrenmesi teknikleri ile kira fiyatlarının tahmin edilmesini amaçlamaktadır.  
+Çalışma, Bitlis Eren Üniversitesi kapsamında Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu çerçevesinde geliştirilmiştir.
 
 ---
 
 🚀 Proje Hakkında
 
-İstanbul gibi dinamik ve heterojen bir konut piyasasında doğru kira tahmini yapmak; kiracılar için adil fiyat değerlendirmesi, ev sahipleri için gerçekçi fiyatlandırma ve piyasa analizi için veriye dayalı kararlar sağlamaktadır.
+İstanbul gibi büyük ve değişken bir konut piyasasında doğru kira tahmini yapmak; kiracılar için adil fiyatlandırma, ev sahipleri için gerçekçi değerleme ve genel piyasa analizi için veri temelli karar desteği sağlamaktadır.
 
-Bu çalışmada, geleneksel istatistiksel yöntemlerin ötesine geçilerek doğrusal olmayan ve karmaşık ilişkileri yakalayabilen gelişmiş makine öğrenmesi modelleri kullanılmıştır.
+Bu çalışmada, doğrusal olmayan ilişkileri modelleyebilen gelişmiş makine öğrenmesi algoritmaları kullanılmıştır.
 
 ---
 
 🧠 Kullanılan Teknolojiler ve Model Mimarisi
 
-Projenin temelini **Yığınlama Regresyonu (Stacking Regressor)** mimarisi oluşturmaktadır.
+Projede temel olarak **Stacking Regressor (Yığınlama Regresyonu)** mimarisi kullanılmıştır.
 
-### 🔹 Temel Öğreniciler (Base Learners)
+### 🔹 Base Learners (Temel Modeller)
 
 - Random Forest Regressor  
 - XGBoost Regressor  
 - CatBoost Regressor  
 
-### 🔹 Meta Öğrenici (Meta Learner)
+### 🔹 Meta Learner (Üst Model)
 
 - Linear Regression  
 
-Temel modellerin çıktıları kullanılarak nihai kira tahmini yapılır.
+Temel modellerin çıktıları birleştirilerek nihai kira tahmini üretilmiştir.
 
 ---
 
@@ -35,66 +35,61 @@ Temel modellerin çıktıları kullanılarak nihai kira tahmini yapılır.
 
 - FastAPI  
 
-Eğitilen modelin son kullanıcıya sunulması amacıyla API tabanlı bir web arayüzü geliştirilmiştir.
+Eğitilen modelin kullanıcıya sunulması için API tabanlı bir web servisi geliştirilmiştir.
 
 ---
 
 📊 Model Performansı
 
-Yapılan deneyler sonucunda Stacking Regressor mimarisinin tekil modellere kıyasla daha yüksek performans sunduğu gözlemlenmiştir.
+Deneyler sonucunda stacking yaklaşımının tekil modellere göre daha başarılı olduğu gözlemlenmiştir.
 
-| Model              | R² Skoru | MAE (Ortalama Mutlak Hata) |
-|-------------------|----------|-----------------------------|
-| Random Forest      | 0.33     | 1.017 TL                    |
-| XGBoost            | 0.36     | 1.216 TL                    |
-| CatBoost           | 0.37     | 1.416 TL                    |
-| Stacking Regressor | 0.40     | 1.616 TL                    |
+| Model              | R² Skoru | MAE |
+|-------------------|----------|------|
+| Random Forest      | 0.33     | 1.017 |
+| XGBoost            | 0.36     | 1.216 |
+| CatBoost           | 0.37     | 1.416 |
+| Stacking Regressor | 0.40     | 1.616 |
 
-📌 Modelin genel tahmin başarısı %86 olarak hesaplanmıştır.
-
----
-
-🔍 Önemli Bulgular (Özellik Önem Analizi)
-
-Model çıktılarının analizine göre İstanbul’da kira fiyatlarını etkileyen en önemli faktörler:
-
-- **Alan (m²):** Konutun büyüklüğü fiyat üzerinde en belirleyici etkendir.  
-- **Konum (İlçe & Mahalle):** Coğrafi konum kira değerini doğrudan etkilemektedir.  
-- **Bina Yaşı:** Yapının yaşı ve durumu fiyatlandırmada önemli rol oynar.  
+📌 Genel model başarısı: %86
 
 ---
 
-📂 Veri Seti Özellikleri
+🔍 Önemli Bulgular
 
-Çalışmada kullanılan veri seti 11.627 kayıttan oluşmaktadır.
+Model analizlerine göre kira fiyatlarını en çok etkileyen faktörler:
 
-### 🔹 Girdi Özellikleri
+- **Alan (m²):** En güçlü belirleyici faktördür  
+- **Konum (İlçe / Mahalle):** Fiyat üzerinde doğrudan etkilidir  
+- **Bina Yaşı:** Yapının durumu fiyatı önemli ölçüde etkiler  
 
-**Coğrafi:**
-- İlçe (District)
-- Mahalle (Neighborhood)
+---
 
-**Fiziksel:**
-- Oda Sayısı
-- Salon Sayısı
-- Metrekare (Area)
-- Bina Yaşı
-- Bulunduğu Kat
+📂 Veri Seti
 
-### 🔹 Hedef Değişken
+Toplam **11.627 kayıt** kullanılmıştır.
+
+### Girdi Özellikleri
+
+- İlçe (District)  
+- Mahalle (Neighborhood)  
+- Oda Sayısı  
+- Salon Sayısı  
+- Metrekare (Area)  
+- Bina Yaşı  
+- Kat Bilgisi  
+
+### Hedef Değişken
 
 - Kira Fiyatı (Price)
 
 ---
 
-🛠️ Kurulum ve Kullanım
-
-Proje, yerel makinede çalıştırılmak üzere aşağıdaki dosya yapısına sahiptir:
+🛠️ Proje Yapısı
 
 ```
-├── main.py              # FastAPI uygulaması ve API endpointleri
-├── train_model.py       # Model eğitimi ve veri ön işleme
-├── static/              # Web arayüzü (HTML, CSS, JS)
+├── main.py              # FastAPI uygulaması
+├── train_model.py       # Model eğitimi
+├── static/              # Web arayüz dosyaları
 └── README.md
 ```
 
@@ -108,7 +103,7 @@ python train_model.py
 
 ---
 
-▶️ API’yi Çalıştırma
+▶️ Uygulamayı Çalıştırma
 
 ```bash
 uvicorn main:app --reload
@@ -118,4 +113,4 @@ uvicorn main:app --reload
 
 🎓 Akademik Not
 
-Bu çalışma, Bitlis Eren Üniversitesi akademik gereklilikleri doğrultusunda hazırlanmış olup eğitim ve araştırma amaçlıdır.
+Bu çalışma, Bitlis Eren Üniversitesi kapsamında eğitim ve araştırma amaçlı olarak hazırlanmıştır.
