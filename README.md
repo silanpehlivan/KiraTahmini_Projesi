@@ -121,6 +121,7 @@ uvicorn main:app --reload
 ---
 
 🎓 Akademik Not
+---
 
 Bu çalışma, Bitlis Eren Üniversitesi kapsamında eğitim ve araştırma amaçlı olarak hazırlanmıştır.
 
