@@ -1,12 +1,39 @@
-🏠 İstanbul Kiralık Konut Piyasası
+<div align="center">
+
+# İstanbul Kira Tahmini
+
+**Konut verileriyle regresyon analizi**
+
+![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
+![FastAPI](https://img.shields.io/badge/FastAPI-0891b2?style=flat-square)
+![Stacking](https://img.shields.io/badge/Stacking-7c3aed?style=flat-square)
+[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+
+İstanbul kiralık konut verilerinden kira fiyatını tahmin etmek için farklı regresyon modellerini birleştiren akademik çalışma.
+
+</div>
+
 ---
+
+## Öne Çıkanlar
+
+- Random Forest, XGBoost ve CatBoost modelleri
+- Linear Regression ile stacking yaklaşımı
+- Alan, konum ve bina özelliklerine dayalı tahmin
+
+## Teknolojiler
+
+Python · FastAPI · Stacking
+
+<details>
+<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
 Bu proje, İstanbul’daki kiralık konut verileri kullanılarak makine öğrenmesi teknikleri ile kira fiyatlarının tahmin edilmesini amaçlamaktadır.  
 Çalışma, Bitlis Eren Üniversitesi kapsamında Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu çerçevesinde geliştirilmiştir.
 
 ---
 
-🚀 Proje Hakkında
+ Proje Hakkında
 ---
 
 İstanbul gibi büyük ve değişken bir konut piyasasında doğru kira tahmini yapmak; kiracılar için adil fiyatlandırma, ev sahipleri için gerçekçi değerleme ve genel piyasa analizi için veri temelli karar desteği sağlamaktadır.
@@ -15,18 +42,18 @@ Bu çalışmada, doğrusal olmayan ilişkileri modelleyebilen gelişmiş makine 
 
 ---
 
-🧠 Kullanılan Teknolojiler ve Model Mimarisi
+ Kullanılan Teknolojiler ve Model Mimarisi
 ---
 
 Projede temel olarak **Stacking Regressor (Yığınlama Regresyonu)** mimarisi kullanılmıştır.
 
-### 🔹 Base Learners (Temel Modeller)
+### Base Learners (Temel Modeller)
 
 - Random Forest Regressor  
 - XGBoost Regressor  
 - CatBoost Regressor  
 
-### 🔹 Meta Learner (Üst Model)
+### Meta Learner (Üst Model)
 
 - Linear Regression  
 
@@ -34,7 +61,7 @@ Temel modellerin çıktıları birleştirilerek nihai kira tahmini üretilmişti
 
 ---
 
-### 🔹 Web Arayüzü
+### Web Arayüzü
 ---
 
 - FastAPI  
@@ -43,7 +70,7 @@ Eğitilen modelin kullanıcıya sunulması için API tabanlı bir web servisi ge
 
 ---
 
-📊 Model Performansı
+ Model Performansı
 ---
 
 Deneyler sonucunda stacking yaklaşımının tekil modellere göre daha başarılı olduğu gözlemlenmiştir.
@@ -55,11 +82,11 @@ Deneyler sonucunda stacking yaklaşımının tekil modellere göre daha başarı
 | CatBoost           | 0.37     | 1.416 |
 | Stacking Regressor | 0.40     | 1.616 |
 
-📌 Genel model başarısı: %86
+ Genel model başarısı: %86
 
 ---
 
-🔍 Önemli Bulgular
+ Önemli Bulgular
 ---
 
 Model analizlerine göre kira fiyatlarını en çok etkileyen faktörler:
@@ -70,7 +97,7 @@ Model analizlerine göre kira fiyatlarını en çok etkileyen faktörler:
 
 ---
 
-📂 Veri Seti
+ Veri Seti
 ---
 
 Toplam **11.627 kayıt** kullanılmıştır.
@@ -92,7 +119,7 @@ Toplam **11.627 kayıt** kullanılmıştır.
 
 ---
 
-🛠️ Proje Yapısı
+ Proje Yapısı
 ---
 
 ```
@@ -104,7 +131,7 @@ Toplam **11.627 kayıt** kullanılmıştır.
 
 ---
 
-▶️ Model Eğitimi
+ Model Eğitimi
 
 ```bash
 python train_model.py
@@ -112,7 +139,7 @@ python train_model.py
 
 ---
 
-▶️ Uygulamayı Çalıştırma
+ Uygulamayı Çalıştırma
 
 ```bash
 uvicorn main:app --reload
@@ -120,20 +147,24 @@ uvicorn main:app --reload
 
 ---
 
-🎓 Akademik Not
+ Akademik Not
 ---
 
 Bu çalışma, Bitlis Eren Üniversitesi kapsamında eğitim ve araştırma amaçlı olarak hazırlanmıştır.
 
 ---
-## 📜 Lisans
 
-Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
 
 ---
-## 👩‍💻 Geliştiriciler
 
-Bu proje, **Makine Öğrenmesi** dersi kapsamında aşağıda isimleri yer alan geliştiriciler tarafından hazırlanmıştır:
+</details>
 
-- Şilan PEHLİVAN  
-- Sevgi GOLGİYAZ   
+---
+
+<div align="center">
+
+**© 2026 Şilan PEHLİVAN and Sevgi GOLGİYAZ**
+
+Bu proje MIT lisansı kapsamında sunulmaktadır. Kullanım ve dağıtım koşulları: [LICENSE](LICENSE).
+
+</div>
