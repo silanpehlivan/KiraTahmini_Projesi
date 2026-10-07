@@ -2,18 +2,33 @@
 
 # İstanbul Kira Tahmini
 
+### İstanbul konut verilerinden kira tahminine.
+
+![Python](https://img.shields.io/badge/Python-2563eb?style=for-the-badge)
+![FastAPI](https://img.shields.io/badge/FastAPI-0891b2?style=for-the-badge)
+![Stacking](https://img.shields.io/badge/Stacking-7c3aed?style=for-the-badge)
+[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
+
+İstanbul kiralık konut verilerinden kira fiyatını tahmin etmek için farklı regresyon modellerini birleştiren tahmin uygulaması.
+
 **Konut verileriyle regresyon analizi**
 
-![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
-![FastAPI](https://img.shields.io/badge/FastAPI-0891b2?style=flat-square)
-![Stacking](https://img.shields.io/badge/Stacking-7c3aed?style=flat-square)
-[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
-
-İstanbul kiralık konut verilerinden kira fiyatını tahmin etmek için farklı regresyon modellerini birleştiren akademik çalışma.
+[Projeyi keşfet](https://github.com/silanpehlivan/KiraTahmini_Projesi/tree/main) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
 
 </div>
 
 ---
+
+## İçeride neler var?
+
+- **01** · Random Forest, XGBoost ve CatBoost modelleri
+- **02** · Linear Regression ile stacking yaklaşımı
+- **03** · Alan, konum ve bina özelliklerine dayalı tahmin
+
+## Projeyi çalıştırmak ve incelemek
+
+<details>
+<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
 
 ## Öne Çıkanlar
 
@@ -25,7 +40,7 @@
 
 Python · FastAPI · Stacking
 
-## Teknik yaklaşım
+### Teknik yaklaşım
 
 Eksik/tekrarlı kayıt ve uç değer temizliği sonrası konum kodlanır. Random Forest, XGBoost ve CatBoost tahminleri Linear Regression meta modeliyle birleştirilir; R² ve MAE hesaplanır.
 
@@ -37,18 +52,17 @@ C --> D[Linear Regression meta model]
 D --> E[Kira tahmini]
 ```
 
-## Kodu incelemeye başlayın
+### Kodu incelemeye başlayın
 
 - [KiraTahmini_Projesi/train_model.py](KiraTahmini_Projesi/train_model.py)
 - [KiraTahmini_Projesi/main.py](KiraTahmini_Projesi/main.py)
 - [KiraTahmini_Projesi/static/index.html](KiraTahmini_Projesi/static/index.html)
 
-## Kapsam ve sınırlar
+### Kapsam ve sınırlar
 
 R²/MAE eğitim betiğinde hesaplanır; burada yeni deney sonucu üretilmemiştir. Zaman ve konum dağılımındaki değişimler tahmini etkiler.
 
-<details>
-<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
+
 
 Bu proje, İstanbul’daki kiralık konut verileri kullanılarak makine öğrenmesi teknikleri ile kira fiyatlarının tahmin edilmesini amaçlamaktadır.  
 Çalışma, Bitlis Eren Üniversitesi kapsamında Şilan Pehlivan ve Sevgi Golgiyaz tarafından hazırlanmış bir Makine Öğrenmesi proje raporu çerçevesinde geliştirilmiştir.
@@ -178,6 +192,8 @@ Bu çalışma, Bitlis Eren Üniversitesi kapsamında eğitim ve araştırma ama�
 
 
 ---
+
+
 
 </details>
 
