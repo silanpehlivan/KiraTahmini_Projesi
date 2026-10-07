@@ -25,6 +25,28 @@
 
 Python · FastAPI · Stacking
 
+## Teknik yaklaşım
+
+Eksik/tekrarlı kayıt ve uç değer temizliği sonrası konum kodlanır. Random Forest, XGBoost ve CatBoost tahminleri Linear Regression meta modeliyle birleştirilir; R² ve MAE hesaplanır.
+
+```mermaid
+flowchart LR
+A[Konut özellikleri] --> B[Temizleme ve kodlama]
+B --> C[RF XGBoost CatBoost]
+C --> D[Linear Regression meta model]
+D --> E[Kira tahmini]
+```
+
+## Kodu incelemeye başlayın
+
+- [KiraTahmini_Projesi/train_model.py](KiraTahmini_Projesi/train_model.py)
+- [KiraTahmini_Projesi/main.py](KiraTahmini_Projesi/main.py)
+- [KiraTahmini_Projesi/static/index.html](KiraTahmini_Projesi/static/index.html)
+
+## Kapsam ve sınırlar
+
+R²/MAE eğitim betiğinde hesaplanır; burada yeni deney sonucu üretilmemiştir. Zaman ve konum dağılımındaki değişimler tahmini etkiler.
+
 <details>
 <summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
